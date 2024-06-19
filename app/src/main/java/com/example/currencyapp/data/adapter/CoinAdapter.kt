@@ -19,7 +19,6 @@ class CoinAdapter(private val coin: CoinNames) : RecyclerView.Adapter<CoinAdapte
         val high: TextView = itemView.findViewById(R.id.tvCoinHighRate)
         val low: TextView = itemView.findViewById(R.id.tvCoinLowRate)
         val rateChange: TextView = itemView.findViewById(R.id.tvCoinChange)
-        val rateVariantion: TextView = itemView.findViewById(R.id.tvVariantionRate)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinVH {
@@ -37,6 +36,5 @@ class CoinAdapter(private val coin: CoinNames) : RecyclerView.Adapter<CoinAdapte
         holder.high.text = coins.high
         holder.low.text = coins.low
         holder.rateChange.text = coins.pctChange
-        holder.rateVariantion.text = coins.varBid
     }
 }
